@@ -1,0 +1,231 @@
+/*
+
+COULEURS : 
+
+	Prédominance Noir/Rouge voir un peu de Orange/jaune
+
+*/
+
+@font-face {
+  font-family: "LifeCraft";
+  src: url("../fonts/LifeCraft.ttf");
+}
+
+@font-face {
+  font-family: "fanjofey";
+  src: url("../fonts/fanjofey.ttf");
+}
+
+@font-face {
+  font-family: "acadian";
+  src: url("../fonts/acadian.ttf");
+}
+
+html,body{height:100%;}
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+.fill{width:100%;height:100%;background-position:center;background-size:cover;}
+
+/* faster sliding speed */
+.carousel-inner > .item {
+    -webkit-transition: 0.3s ease-in-out left;
+    -moz-transition: 0.3s ease-in-out left;
+    -o-transition: 0.3s ease-in-out left;
+    transition: 0.3s ease-in-out left;
+}
+
+/* keep full widget on smaller screens */
+@media (max-width: 767px) { 
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+body {
+	
+	background-color: #000 !important;
+	color: #fff !important;
+	/* The image used */
+	background-image: url('../images/ogrimmar.jpg');
+	
+    /* Set a specific height */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.one-page-header.navbar {
+    padding: 12px 0;
+}
+.one-page-header {
+    border-bottom: none;
+    background: rgba(0,0,0,0.4) !important;
+	border: none !important;
+}
+
+.navbar-brand {
+	font-family: "acadian";
+	font-size: 300% !important;
+	color: #fff !important;
+}
+
+.nav, .navbar-nav {
+	float: right !important;
+	text-transform: uppercase;
+	font-family: "LifeCraft";
+	font-size: 200%;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff !important;
+	
+}
+
+.carousel,.item,.active{
+	height:100%;
+}
+
+.carousel-inner{
+	height:100%;
+}
+
+.lettrine {
+	font-family: "fanjofey";
+	color: red;
+}
+
+.carousel-caption h3 {
+	font-family: "LifeCraft";
+}
+
+@media (min-width: 767px) { 
+	.carousel-caption h3 {
+		font-family: "LifeCraft";
+		font-size: 250%;
+	}
+
+	.carousel-caption p {
+		
+		font-size: 100%;
+	}
+	
+	.background h3{
+		font-family: "LifeCraft";
+		font-size: 300%;
+	}
+	
+	.background p{
+		font-size: 200%;
+	}
+
+}
+
+.server-status {
+	padding: 10%;
+	text-align: center;
+}
+
+.server-status h3 {
+	font-family: "LifeCraft";
+}
+
+.team {
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+	text-align: center;
+}
+
+.team h3 {
+	font-family: "LifeCraft";
+}
+
+.iframe {
+	text-align: center;
+	padding: 5%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+
+.main {
+	background-image: -webkit-linear-gradient(rgba(242, 151, 42, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+	text-align: center;
+}
+
+.icon {
+	width: 100px;
+	height: 100px;
+}
+
+.icon-nostalgeek {
+	width: 200px;
+	height: 100px;
+}
+
+.presentation {
+	background-color: rgba(0, 0, 0, 1);
+	padding: 10%;
+}
+
+.uppercase {
+	text-transform: uppercase;
+	font-family: "LifeCraft";
+}
+
+.center {
+	text-align: center;
+}
+
+hr.style1 { 
+  width: 50px;
+  border: 0; 
+  height: 3px; 
+  background-image: -webkit-linear-gradient(left, red, #000, red);
+  background-image: -moz-linear-gradient(left, red, #000, red);
+  background-image: -ms-linear-gradient(left, red, #000, red);
+  background-image: -o-linear-gradient(left, red, #000, red); 
+}
+
+hr.style2 { 
+  width: 50px;
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42));
+  background-image: -moz-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42));
+  background-image: -ms-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42));
+  background-image: -o-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42)); 
+}
+
+hr.style3 { 
+  width: 50px;
+  border: 0; 
+  height: 3px; 
+  background-image: -webkit-linear-gradient(left, #000, yellow, rgb(242, 151, 42));
+  background-image: -moz-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42));
+  background-image: -ms-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42));
+  background-image: -o-linear-gradient(left, #000, rgb(255, 0, 0), rgb(242, 151, 42)); 
+}
+
+hr.style4 { 
+  width: 50px;
+  border: 0; 
+  height: 3px; 
+  background-image: -webkit-linear-gradient(left, red, #000, red);
+  background-image: -moz-linear-gradient(left, red, #000, red);
+  background-image: -ms-linear-gradient(left, red, #000, red);
+  background-image: -o-linear-gradient(left, red, #000, red); 
+}
+
+.avatar {
+	border-radius: 50%;
+}
+
+.style1 {
+	text-align: left !important;
+}
+
+.style2 {
+	text-align: right !important;
+}
