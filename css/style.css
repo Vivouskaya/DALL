@@ -26,6 +26,7 @@ html,body{height:100%;}
 .carousel-inner{height:100%;}
 .fill{width:100%;height:100%;background-position:center;background-size:cover;}
 
+
 /* faster sliding speed */
 .carousel-inner > .item {
     -webkit-transition: 0.3s ease-in-out left;
@@ -46,8 +47,6 @@ body {
 	
 	background-color: #000 !important;
 	color: #fff !important;
-	/* The image used */
-	background-image: url('../images/ogrimmar.jpg');
 	
     /* Set a specific height */
 
@@ -63,21 +62,25 @@ body {
 }
 .one-page-header {
     border-bottom: none;
-    background: rgba(0,0,0,0.4) !important;
+    background: rgba(0,0,0,0.2) !important;
 	border: none !important;
+}
+
+.scrolled {
+	background: rgba(0,0,0,1) !important;
 }
 
 .navbar-brand {
 	font-family: "acadian";
-	font-size: 300% !important;
 	color: #fff !important;
+	font-size: 180% !important;
 }
 
 .nav, .navbar-nav {
 	float: right !important;
 	text-transform: uppercase;
 	font-family: "LifeCraft";
-	font-size: 200%;
+	font-size: 120%;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -102,7 +105,20 @@ body {
 	font-family: "LifeCraft";
 }
 
+.event {
+	width: 50%;
+}
+
 @media (min-width: 767px) { 
+
+	.navbar-brand {
+		font-size: 300% !important;
+	}
+
+	.nav, .navbar-nav {
+		font-size: 200%;
+	}
+	
 	.carousel-caption h3 {
 		font-family: "LifeCraft";
 		font-size: 250%;
@@ -125,8 +141,9 @@ body {
 }
 
 .server-status {
-	padding: 10%;
+	padding: 2%;
 	text-align: center;
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
 }
 
 .server-status h3 {
@@ -134,8 +151,9 @@ body {
 }
 
 .team {
-	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7),  rgba(0, 0, 0, 1));
 	text-align: center;
+	padding-bottom: 1%;
 }
 
 .team h3 {
@@ -150,8 +168,9 @@ body {
 }
 
 .main {
-	background-image: -webkit-linear-gradient(rgba(242, 151, 42, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
 	text-align: center;
+
 }
 
 .icon {
@@ -165,7 +184,6 @@ body {
 }
 
 .presentation {
-	background-color: rgba(0, 0, 0, 1);
 	padding: 10%;
 }
 
@@ -222,10 +240,55 @@ hr.style4 {
 	border-radius: 50%;
 }
 
-.style1 {
+.style1 .event {
 	text-align: left !important;
+	float: left !important;
 }
 
-.style2 {
+.style2 .event {
 	text-align: right !important;
+	float: right !important;
+}
+
+.main-image {
+	/* The image used */
+	background-image: url('../images/ogrimmar.jpg');
+	
+    /* Set a specific height */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-start {
+	
+	/* The image used */
+	background-image: url('../images/paysage.jpg');
+	
+    /* Set a specific height */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.filter-footer {
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); 
+}
+
+footer {
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)); 
+	padding: 10%;
+	list-style:none;
 }
