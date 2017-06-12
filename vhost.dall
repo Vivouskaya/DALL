@@ -1,0 +1,12 @@
+#Listen 127.0.0.5:80
+<VirtualHost 127.0.0.5:80>
+  ServerName dall.localhost
+  DocumentRoot "D:\Projets\DALL"
+  
+  <Directory "D:\Projets\DALL">
+	DirectoryIndex index.php
+    #Options -Indexes FollowSymLinks SymLinksifOwnerMatch
+    Allow from All
+    Require all granted 
+  </Directory>
+</VirtualHost>

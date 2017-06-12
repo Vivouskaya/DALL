@@ -47,6 +47,7 @@ body {
 	
 	background-color: #000 !important;
 	color: #fff !important;
+	overflow-x: hidden;
 	
     /* Set a specific height */
 
@@ -252,7 +253,7 @@ hr.style4 {
 
 .main-image {
 	/* The image used */
-	background-image: url('../images/ogrimmar.jpg');
+	background-image: url('../images/background/ogrimmar.jpg');
 	
     /* Set a specific height */
 
@@ -266,7 +267,7 @@ hr.style4 {
 .footer-start {
 	
 	/* The image used */
-	background-image: url('../images/paysage.jpg');
+	background-image: url('../images/background/paysage.jpg');
 	
     /* Set a specific height */
 
@@ -291,4 +292,51 @@ footer {
 	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)); 
 	padding: 10%;
 	list-style:none;
+}
+
+.color-red  {
+	color: red;
+}
+
+.img-circle {
+	height: 200px !important;
+	width: 200px !important;
+}
+
+.classe-icon {
+	height: 25px;
+	width: 25px;
+}
+
+.tank {
+	background-image: url('../images/shield.png');
+	opacity: 0.55;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 475px;
+	width: auto% !important;
+	padding: 10%;
+}
+
+.healer {
+	background-image: url('../images/healer.png');
+	opacity: 0.55;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 475px;
+	width: auto% !important;
+	padding: 10%;
+}
+
+.dps {
+	background-image: url('../images/sword.png');
+	opacity: 0.55;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 475px;
+	width: auto% !important;
+	padding: 10%;
 }
