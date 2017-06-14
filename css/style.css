@@ -303,6 +303,7 @@ footer {
 	width: 200px !important;
 }
 
+/*
 @media (min-width: 767px) { 
 	.classe-icon {
 		height: 25px;
@@ -340,7 +341,7 @@ footer {
 		#padding: 13%;
 		font-size: 20px;
 		color: #000;
-		padding-top: 15%;
+		padding-top: 25%;
 		padding-left: 10%;
 		padding-right: 10%;
 		font-family: "LifeCraft";
@@ -382,6 +383,67 @@ footer {
 		padding-top: 30%;
 		padding-left: 10%;
 	}
+}*/
+
+.parchemin {
+	background-image: url('../images/parchemin.png');
+	#opacity: 0.55;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 50vw;
+	padding: 5vw;
+	padding-top: 11vw;
+}
+
+.tableaux {
+	height: 28vw;
+	#border: solid 1px;
+	overflow-y: scroll;
+	font-size: 1vw;
+	color: #000;
+	font-family: "LifeCraft";
+}
+
+.tableaux th {
+		width: 15vw;
+		height: 2vw;
+		text-align: left;
+	}
+	.tableaux td {
+		text-align: left;
+	}
+
+.classe-icon {
+	height: 1vw;
+	width: 1vw;
+}
+
+.tank {
+	
+}
+
+.dps {
+	
+}
+
+.healer {
+	
+}
+
+.tank-img {
+	height: 1.5vw;
+	width: 1.5vw;
+}
+	
+.dps-img {
+	height: 1.5vw;
+	width: 1.5vw;
+}
+	
+.healer-img {
+	height: 1.5vw;
+	width: 1.5vw;
 }
 
 .guerrier {
