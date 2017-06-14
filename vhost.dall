@@ -1,9 +1,9 @@
 #Listen 127.0.0.5:80
 <VirtualHost 127.0.0.5:80>
   ServerName dall.localhost
-  DocumentRoot "D:\Projets\DALL"
+  DocumentRoot "E:\Projet\perso\DALL"
   
-  <Directory "D:\Projets\DALL">
+  <Directory "E:\Projet\perso\DALL">
 	DirectoryIndex index.php
     #Options -Indexes FollowSymLinks SymLinksifOwnerMatch
     Allow from All

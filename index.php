@@ -67,7 +67,7 @@
 			<div id="myCarousel" class="carousel slide">
 			  <div class="carousel-inner">
 				<div class="active item">
-				  <div class="fill" style="background-image:url('images/carousel/slide.png');">
+				  <div class="fill" style="background-image:url('images/carousel-images/slide.png');">
 					<!--
 					<div class="carousel-caption">
 						<h3>First Event</h3>
@@ -77,7 +77,7 @@
 				  </div>
 				</div>
 				<div class="item">
-				  <div class="fill" style="background-image:url('images/carousel/slide1.jpg');">
+				  <div class="fill" style="background-image:url('images/carousel-images/slide1.jpg');">
 					<div class="carousel-caption style1">
 						<div class="event">
 							<h3>First Event</h3>
@@ -87,7 +87,7 @@
 				  </div>
 				</div>
 				<div class="item">
-				  <div class="fill" style="background-image:url('images/carousel/slide2.jpg');">
+				  <div class="fill" style="background-image:url('images/carousel-images/slide2.jpg');">
 					<div class="carousel-caption style2">
 						<div class="event">
 							<h3>Second Event</h3>
@@ -97,7 +97,7 @@
 				  </div>
 				</div>
 				<div class="item">
-				  <div class="fill" style="background-image:url('images/carousel/slide3.jpg');">
+				  <div class="fill" style="background-image:url('images/carousel-images/slide3.jpg');">
 					<div class="carousel-caption style1">
 						<div class="event">
 							<h3>Third Event</h3>
@@ -286,7 +286,7 @@
 							<iframe src="https://agenda.dall.fr/widget/roster/index/2" width="80%" height="600px" frameborder="0"></iframe>
 						</div>
 						-->
-						<div class="membres">
+						<div class="membres col-md-12">
 							<?php 
 								
 								// base class with member properties and methods
@@ -392,186 +392,140 @@
 								$membre_test3->setUser("blackrainbow");
 								
 								array_push($membres, $membre_test3);
+								
+								$membre_test4 = new Membre();
+								$membre_test4->setName("Attack");
+								$membre_test4->setLevel(60);
+								$membre_test4->setRole("DPS");
+								$membre_test4->setClasse("Chasseur");
+								$membre_test4->setRace("Troll");
+								$membre_test4->setUser("Thinlizzy");
+								
+								array_push($membres, $membre_test4);
+								
+								$membre_test = new Membre();
+								$membre_test->setName("Blackrainbøw");
+								$membre_test->setLevel(60);
+								$membre_test->setRole("DPS");
+								$membre_test->setClasse("Guerrier");
+								$membre_test->setRace("Mort-Vivant");
+								$membre_test->setUser("blackrainbow");
+								
+								array_push($membres, $membre_test);
+								
+								$membre_test = new Membre();
+								$membre_test->setName("camoulox");
+								$membre_test->setLevel(60);
+								$membre_test->setRole("DPS");
+								$membre_test->setClasse("Chaman");
+								$membre_test->setRace("Orc");
+								$membre_test->setUser("gramoune");
+								
+								array_push($membres, $membre_test);
+								
+								$membre_test = new Membre();
+								$membre_test->setName("Cornesprit");
+								$membre_test->setLevel(59);
+								$membre_test->setRole("DPS");
+								$membre_test->setClasse("Druide");
+								$membre_test->setRace("Tauren");
+								$membre_test->setUser("Tulkas");
+								
+								array_push($membres, $membre_test);
+								
+								$membre_test = new Membre();
+								$membre_test->setName("Couturette");
+								$membre_test->setLevel(60);
+								$membre_test->setRole("DPS");
+								$membre_test->setClasse("Mage");
+								$membre_test->setRace("Troll");
+								$membre_test->setUser("laforge");
+								
+								array_push($membres, $membre_test);
+								
 								?>
 								
 								<!-- construction des tableaux -->
-								
-								<!-- tank -->
-								<div class="tank col-md-6">
-									<table class="table">
-										<tr>
-											<th>Nom</th>
-											<th>Niveau</th>
-											<th>Rôle</th>
-											<th>Classe</th>
-											<th>Race</th>
-											<th>Utilisateur</th>
-										</tr>
-										<?php
-										foreach($membres as $m) {
-											echo "<tr>";
+								<div class="parchemin">
+									<div class="tableaux">
+										<table class="">
+											<tr>
+												<th>Nom</th>
+												<th>Niveau</th>
+												<th>Classe</th>
+												<th>Race</th>
+												<th>Utilisateur</th>
+											</tr>
+											<?php
+											foreach($membres as $m) {
+												if($m->getClasse() == "Guerrier") {
+													echo "<tr class='guerrier'>";
+												}
+												if($m->getClasse() == "Chaman") {
+													echo "<tr class='chaman'>";
+												}
+												if($m->getClasse() == "Druide") {
+													echo "<tr class='druide'>";
+												}
+												if($m->getClasse() == "Prêtre") {
+													echo "<tr class='pretre'>";
+												}
+												if($m->getClasse() == "Chasseur") {
+													echo "<tr class='chasseur'>";
+												}
+												if($m->getClasse() == "Démoniste") {
+													echo "<tr class='demoniste'>";
+												}
+												if($m->getClasse() == "Voleur") {
+													echo "<tr class='voleur'>";
+												}
+												if($m->getClasse() == "Mage") {
+													echo "<tr class='mage'>";
+												}
 												echo "<td>" . $m->getName() . "</td>";
 												echo "<td>" . $m->getLevel() . "</td>";
-												echo "<td>" . $m->getRole() . "</td>";
 												echo "<td>";
 												if($m->getClasse() == "Guerrier") {
 													echo "<img class='classe-icon' src='images/class-icons/guerrier.png' />";
-													echo "<span style='color: #C1C72B;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Chaman") {
 													echo "<img class='classe-icon' src='images/class-icons/chaman.png' />";
-													echo "<span style='color: #0B0C8F;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Druide") {
 													echo "<img class='classe-icon' src='images/class-icons/druide.png' />";
-													echo "<span style='color: #CA4D28;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Prêtre") {
 													echo "<img class='classe-icon' src='images/class-icons/pretre.png' />";
-													echo "<span style='color: #000000;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Chasseur") {
 													echo "<img class='classe-icon' src='images/class-icons/chasseur.png' />";
-													echo "<span style='color: #748854;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Démoniste") {
 													echo "<img class='classe-icon' src='images/class-icons/demoniste.png' />";
-													echo "<span style='color: #3F058C;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Voleur") {
 													echo "<img class='classe-icon' src='images/class-icons/voleur.png' />";
-													echo "<span style='color: #C1C72B;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
 												if($m->getClasse() == "Mage") {
 													echo "<img class='classe-icon' src='images/class-icons/mage.png' />";
-													echo "<span style='color: #A2E7E9;'>" . $m->getClasse() . "</span>";
+													echo "<span>" . $m->getClasse() . "</span>";
 												}
-												
+														
 												echo "</td>";
 												echo "<td>" . $m->getRace() . "</td>";
 												echo "<td>" . $m->getUser() . "</td>";
-											echo "</tr>";
-										}
-										?>
-									</table>
-								</div>
-								<!-- healer -->
-								<div class="healer col-md-6">
-									<table class="table">
-										<tr>
-											<th>Nom</th>
-											<th>Niveau</th>
-											<th>Rôle</th>
-											<th>Classe</th>
-											<th>Race</th>
-											<th>Utilisateur</th>
-										</tr>
-										<?php
-										foreach($membres as $m) {
-											echo "<tr>";
-												echo "<td>" . $m->getName() . "</td>";
-												echo "<td>" . $m->getLevel() . "</td>";
-												echo "<td>" . $m->getRole() . "</td>";
-												echo "<td>";
-												if($m->getClasse() == "Guerrier") {
-													echo "<img class='classe-icon' src='images/class-icons/guerrier.png' /> ";
-													echo "<span style='color: #C1C72B;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Chaman") {
-													echo "<img class='classe-icon' src='images/class-icons/chaman.png' /> ";
-													echo "<span style='color: #0B0C8F;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Druide") {
-													echo "<img class='classe-icon' src='images/class-icons/druide.png' /> ";
-													echo "<span style='color: #CA4D28;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Prêtre") {
-													echo "<img class='classe-icon' src='images/class-icons/pretre.png' /> ";
-													echo "<span style='color: #000000;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Chasseur") {
-													echo "<img class='classe-icon' src='images/class-icons/chasseur.png' /> ";
-													echo "<span style='color: #748854;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Démoniste") {
-													echo "<img class='classe-icon' src='images/class-icons/demoniste.png' /> ";
-													echo "<span style='color: #3F058C;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Voleur") {
-													echo "<img class='classe-icon' src='images/class-icons/voleur.png' /> ";
-													echo "<span style='color: #C1C72B;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Mage") {
-													echo "<img class='classe-icon' src='images/class-icons/mage.png' /> ";
-													echo "<span style='color: #A2E7E9;'>" . $m->getClasse() . "</span>";
-												}
-												
-												echo "</td>";
-												echo "<td>" . $m->getRace() . "</td>";
-												echo "<td>" . $m->getUser() . "</td>";
-											echo "</tr>";
-										}
-										?>
-									</table>
-								</div>
-								<!-- dps -->
-								<div class="dps col-md-6">
-									<table class="table">
-										<tr>
-											<th>Nom</th>
-											<th>Niveau</th>
-											<th>Rôle</th>
-											<th>Classe</th>
-											<th>Race</th>
-											<th>Utilisateur</th>
-										</tr>
-										<?php
-										foreach($membres as $m) {
-											echo "<tr>";
-												echo "<td>" . $m->getName() . "</td>";
-												echo "<td>" . $m->getLevel() . "</td>";
-												echo "<td>" . $m->getRole() . "</td>";
-												echo "<td>";
-												if($m->getClasse() == "Guerrier") {
-													echo "<img class='classe-icon' src='images/class-icons/guerrier.png' />";
-													echo "<span style='color: #C1C72B;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Chaman") {
-													echo "<img class='classe-icon' src='images/class-icons/chaman.png' />";
-													echo "<span style='color: #0B0C8F;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Druide") {
-													echo "<img class='classe-icon' src='images/class-icons/druide.png' />";
-													echo "<span style='color: #CA4D28;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Prêtre") {
-													echo "<img class='classe-icon' src='images/class-icons/pretre.png' />";
-													echo "<span style='color: #000000;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Chasseur") {
-													echo "<img class='classe-icon' src='images/class-icons/chasseur.png' />";
-													echo "<span style='color: #748854;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Démoniste") {
-													echo "<img class='classe-icon' src='images/class-icons/demoniste.png' />";
-													echo "<span style='color: #3F058C;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Voleur") {
-													echo "<img class='classe-icon' src='images/class-icons/voleur.png' />";
-													echo "<span style='color: #C1C72B;'>" . $m->getClasse() . "</span>";
-												}
-												if($m->getClasse() == "Mage") {
-													echo "<img class='classe-icon' src='images/class-icons/mage.png' />";
-													echo "<span style='color: #A2E7E9;'>" . $m->getClasse() . "</span>";
-												}
-												
-												echo "</td>";
-												echo "<td>" . $m->getRace() . "</td>";
-												echo "<td>" . $m->getUser() . "</td>";
-											echo "</tr>";
-										}
-										?>
-									</table>
+												echo "</tr>";
+											}
+											?>
+										</table>										
+									</div>
 								</div>
 						</div>
 					</div>
